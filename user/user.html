@@ -12,31 +12,34 @@
 </head>
 
 <body>
+    <!-- 卡片区域 -->
     <div class="layui-card">
         <div class="layui-card-header">修改用户信息</div>
         <div class="layui-card-body">
-            <form class="layui-form" action="" lay-filter='formUserInfo'>
+            <!-- form表单区域 -->
+
+            <form class="layui-form" lay-filter='formUserInfo'>
                 <!-- 这是隐藏域 -->
-                <input type="hidden" name="id" value="">
+                <input type="hidden" name="id" />
                 <div class="layui-form-item">
-                    <label class="layui-form-label">登陆名称</label>
+                    <label class="layui-form-label">登录名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="username" required lay-verify="required" placeholder="请输入标题"
-                            autocomplete="off" class="layui-input">
+                        <input type="text" name="username" required lay-verify="required" placeholder="请输入登录名称"
+                            autocomplete="off" class="layui-input" readonly />
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户昵称</label>
                     <div class="layui-input-block">
-                        <input type="text" name="nickname" required lay-verify="required" placeholder="请输入标题"
-                            autocomplete="off" class="layui-input">
+                        <input type="text" name="nickname" required lay-verify="required|nickname" placeholder="请输入用户昵称"
+                            autocomplete="off" class="layui-input" />
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户邮箱</label>
                     <div class="layui-input-block">
-                        <input type="text" name="email" required lay-verify="required" placeholder="请输入标题"
-                            autocomplete="off" class="layui-input">
+                        <input type="text" name="email" required lay-verify="required|email" placeholder="请输入用户邮箱"
+                            autocomplete="off" class="layui-input" />
                     </div>
                 </div>
                 <div class="layui-form-item">
