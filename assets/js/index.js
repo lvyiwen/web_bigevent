@@ -33,7 +33,17 @@ function getUnstr() {
             };
             // 调用renderAvatar 渲染用户的头像
             renderAvatar(res.data);
-        }
+        },
+        // 无论成功或失败都会调用comolete函数
+        // complete: function (res) {
+        //     // 在complete 回调函数中可以使用 res.responseJOSN拿到服务器享用回来的数组
+        //     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+        //         // 1. 强制清空 token
+        //         localStorage.removeItem('token')
+        //         // 2. 强制跳转到登录页面
+        //         location.href = '/login.html'
+        //     }
+        // }
     })
 };
 
