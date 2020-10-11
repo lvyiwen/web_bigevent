@@ -3,7 +3,7 @@ $(function () {
 
 
     form.verify({
-        pass: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
+        pwd: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
         samePwd: function (value) {
             if (value === $('[name=oldPwd]').val()) {
                 return '新旧密码不能相同'
