@@ -8,13 +8,13 @@ $(function () {
         ],
         // 原密码与新密码比较
         samePwd: function (value) {
-            if (value === $('[name=oldPwd]')) {
+            if (value === $('[name=oldPwd]').val()) {
                 return '新旧密码不能相同!';
             };
         },
         // 新密码与确认新密码 进行比较
         rePwd: function (value) {
-            if (value !== $('[name=newPwd]')) {
+            if (value !== $('[name=newPwd]').val()) {
                 return '两次密码不一致!';
             };
         },
@@ -37,6 +37,7 @@ $(function () {
                 // 重置表单 reset()方法
                 // 将jquery准换位document对象
                 $('.layui-form')[0].reset();
+
             }
         })
     })

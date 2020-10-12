@@ -23,7 +23,6 @@ $(function () {
 
     // 监听文件选择框的change事件
     $('#coverFile').on('change', function (e) {
-        console.log('ok');
         // 获取选择的文件状态
         var file = e.target.files;
         // 判断是否选择了文件
